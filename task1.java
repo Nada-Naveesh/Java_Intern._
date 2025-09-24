@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class LoopingCalculator {
 
-    // 1️⃣ Methods for operations
+    
     public static double add(double a, double b) {
         return a + b;
     }
@@ -18,7 +18,7 @@ public class LoopingCalculator {
     public static double divide(double a, double b) {
         if (b == 0) {
             System.out.println("Error: Division by zero is not allowed.");
-            return Double.NaN; // Not-a-Number if invalid
+            return Double.NaN;
         }
         return a / b;
     }
@@ -26,12 +26,11 @@ public class LoopingCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        boolean running = true; // controls the loop
-
+        boolean running = true; 
         System.out.println("==== Welcome to Looping Calculator ====");
 
         while (running) {
-            // Display menu each time
+          
             System.out.println("\nChoose an operation:");
             System.out.println("1. Addition (+)");
             System.out.println("2. Subtraction (-)");
@@ -45,10 +44,10 @@ public class LoopingCalculator {
             if (choice == 5) {
                 running = false;
                 System.out.println("Exiting calculator. Goodbye!");
-                break; // exit loop
+                break;
             }
 
-            // Take two numbers
+            
             System.out.print("Enter first number: ");
             double num1 = scanner.nextDouble();
             System.out.print("Enter second number: ");
@@ -82,4 +81,5 @@ public class LoopingCalculator {
 
         scanner.close();
     }
+
 }
